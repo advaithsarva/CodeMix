@@ -1,0 +1,13 @@
+.qodo
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.env
+venv/
+data/
+*.egg-info/
+dist/
+build/
+.DS_Store
+Thumbs.db
