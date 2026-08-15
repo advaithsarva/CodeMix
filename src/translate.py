@@ -90,6 +90,12 @@ class Translator:
         self._model.to(self.device)
         self._model.eval()
 
+        # NLLB ships generation_config.max_length=200. Passing max_new_tokens
+        # as well makes transformers warn about the conflict on every call.
+        # max_new_tokens is the one we want (it bounds output length rather
+        # than input+output), so clear the other.
+        self._model.generation_config.max_length = None
+
     def translate(
         self,
         sentences,

@@ -17,9 +17,19 @@ Code-mixing is when both languages appear inside a single utterance:
 pip install -r requirements.txt
 ```
 
-`preprocessing.py`, `corpus.py` and `data_collection.py` use the standard
-library only — you can audit and prepare corpora without installing anything.
-The dependencies are needed only for translation and embeddings.
+`preprocessing.py`, `corpus.py`, `metrics.py` and `data_collection.py` use the
+standard library only — you can audit corpora, prepare datasets and score
+translations without installing anything. The dependencies are needed only for
+translation and embeddings.
+
+Verified working with `transformers` 5.12.1 / `huggingface_hub` 1.27.0 /
+`sentence-transformers` 5.6.0 / `torch` 2.7.1:
+
+```
+$ python src/app.py translate --text "నేను office కి వెళ్తున్నాను" --no-embed
+  నేను office కి వెళ్తున్నాను
+-> मैं ऑफिस जा रहा हूँ
+```
 
 ## Usage
 

@@ -1,5 +1,6 @@
 .qodo
 CLAUDE.md
+observe.md
 __pycache__/
 *.pyc
 *.pyo
